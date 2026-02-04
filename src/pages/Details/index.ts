@@ -1,0 +1,1 @@
+export { DigitalTransformationDetail } from './DigitalTransformationDetail';
