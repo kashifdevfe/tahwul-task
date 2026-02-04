@@ -17,7 +17,7 @@ npm run build
 npm run preview
 ```
 
-## Implementation notes (senior-level summary)
+## Implementation notes
 
 - **Responsive, desktop-first layout**
   - App shell is viewport-locked; only the main content scrolls.
