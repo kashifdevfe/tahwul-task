@@ -2,6 +2,10 @@
 
 Tahwul dashboard UI built with **React 19**, **TypeScript**, **Vite**, **Tailwind CSS v4**, **React Router**, and **Recharts**.
 
+## Live demo
+
+`https://tahwul-task.vercel.app/`
+
 ## Getting started
 
 ```bash
