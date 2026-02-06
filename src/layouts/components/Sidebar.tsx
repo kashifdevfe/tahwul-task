@@ -60,15 +60,15 @@ export const Sidebar = ({
                     className={cn(
                         "hidden md:inline-flex items-center justify-center",
                         "absolute right-0 top-4 sm:top-6 translate-x-1/2",
-                        "w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white p-0",
+                        "w-8 h-8 rounded-full bg-white p-0",
                         "border border-slate-200 shadow-md",
                         "hover:bg-slate-50 hover:scale-[1.02] transition-all z-50"
                     )}
                     aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
                 >
                     <ArrowLeft05Icon
-                        size={24}
-                        className={cn("text-[#747A8B] transition-transform sm:w-[26px] sm:h-[26px]", isCollapsed && "rotate-180")}
+                        size={18}
+                        className={cn("text-[#747A8B] transition-transform", isCollapsed && "rotate-180")}
                     />
                 </button>
 

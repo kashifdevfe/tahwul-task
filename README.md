@@ -38,12 +38,19 @@ npm run lint      # Run ESLint
 
 **Type safety**: TypeScript strict mode with types colocated by feature. Consistent use of `type` aliases throughout.
 
-**Custom hooks**: Five production-ready hooks for common patterns:
+**Error handling**: Three-layer error boundary system for graceful failure recovery:
+- App-level boundary catches critical errors with full-page fallback
+- Feature-level boundaries isolate errors to individual sections (charts, lists, grids)
+- Component-level error handling with `useErrorHandler` hook for async operations
+- User-friendly error UI with retry options and detailed logging
+
+**Custom hooks**: Six production-ready hooks for common patterns:
 - `useLocalStorage` - Persist state in localStorage with type safety
 - `useDebounce` - Delay value updates for search optimization
 - `useClickOutside` - Handle clicks outside elements
 - `useMediaQuery` - Responsive breakpoint detection
 - `useWindowSize` - Window dimensions for responsive components
+- `useErrorHandler` - Programmatic error handling with try-catch wrapper
 
 ## Assumptions
 
@@ -57,7 +64,7 @@ npm run lint      # Run ESLint
 
 ## What I would improve with more time
 
-**API Integration**: Connect to real backend for data fetching and mutations. Add loading states, error handling, and caching with React Query or SWR.
+**API Integration**: Connect to real backend for data fetching and mutations. Add loading states, API error handling, and caching with React Query or SWR. Integrate error monitoring services (Sentry, LogRocket) with existing error boundaries.
 
 **Search & Filtering**: Implement actual search with the `useDebounce` hook. Add filters for Progress Status grid and table sorting functionality.
 
@@ -91,13 +98,15 @@ src/
   components/
     common/                  # SearchInput, NotificationButton, UserMenu
     ui/                     # Card, Badge, Avatar, Input, MetricCard, DataTable
+    ErrorBoundary.tsx        # Main error boundary component
+    FeatureErrorFallback.tsx # Feature-level error UI
   
   assets/
     images/                 # Logo, icons
     theme/colors.css        # CSS variables for theming
   
   constants/                # Centralized static text
-  hooks/                    # Custom hooks
+  hooks/                    # Custom hooks (localStorage, debounce, error handling)
   types/type.ts            # Shared type definitions
   utils/                   # Utility functions (cn helper)
 ```
