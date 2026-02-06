@@ -1,5 +1,6 @@
-export { useDisclosure } from './useDisclosure';
-export { useEscapeKey } from './useEscapeKey';
-export { useLockBodyScroll } from './useLockBodyScroll';
+export { useClickOutside } from './useClickOutside';
+export { useDebounce } from './useDebounce';
+export { useLocalStorage } from './useLocalStorage';
 export { useMediaQuery } from './useMediaQuery';
+export { useWindowSize } from './useWindowSize';
 

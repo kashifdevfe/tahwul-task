@@ -8,7 +8,7 @@ export const SearchInput = () => {
             type="text"
             placeholder={UI.SEARCH_PLACEHOLDER}
             leftIcon={<Search size={18} />}
-            className="w-80"
+            className="w-80 bg-[var(--color-background)]"
         />
     );
 };

@@ -1,6 +1,6 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import type { MonthlyPerformance } from './types';
-import { CHART_LABELS } from '../../constants';
+import type { MonthlyPerformance } from '../types';
+import { CHART_LABELS } from '../../../constants';
 
 interface PerformanceChartProps {
     data: MonthlyPerformance[];
@@ -9,7 +9,7 @@ interface PerformanceChartProps {
 export const PerformanceChart = ({ data }: PerformanceChartProps) => {
     return (
         <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm h-full min-w-0">
-            <h2 className="dashboard-heading text-slate-800 mb-6">{CHART_LABELS.PERFORMANCE_OVER_TIME}</h2>
+            <h2 className="heading-bold text-slate-800 mb-6">{CHART_LABELS.PERFORMANCE_OVER_TIME}</h2>
             <div className="h-[220px] sm:h-[250px]">
                 <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={data} margin={{ top: 0, right: 0, left: -20, bottom: 0 }}>

@@ -1,15 +1,15 @@
 import { DashboardLayout } from '../../layouts/DashboardLayout';
-import { Timeline } from './Timeline';
-import { StatsGrid } from './StatsGrid';
-import { LeadersList } from './LeadersList';
-import { RecentActivities } from './RecentActivities';
-import { stats, timeline, progressStatus, leaders, recentActivities, performanceData } from './mockData';
-import { AuditReadiness } from './AuditReadiness';
-import { ProgressGrid } from './ProgressGrid';
-import { PerformanceChart } from './PerformanceChart';
-import { ComplianceChart } from './ComplianceChart';
+import { Timeline } from './components/Timeline';
+import { StatsGrid } from './components/StatsGrid';
+import { LeadersList } from './components/LeadersList';
+import { RecentActivities } from './components/RecentActivities';
+import { stats, timeline, progressStatus, leaders, recentActivities, performanceData } from './data/mockData';
+import { AuditReadiness } from './components/AuditReadiness';
+import { ProgressGrid } from './components/ProgressGrid';
+import { PerformanceChart } from './components/PerformanceChart';
+import { ComplianceChart } from './components/ComplianceChart';
 
-const Dashboard = () => (
+export const Dashboard = () => (
   <DashboardLayout>
     <div className="w-full animate-in fade-in duration-500 pb-12 p-4 sm:p-6">
       <Timeline events={timeline} />
@@ -39,5 +39,3 @@ const Dashboard = () => (
     </div>
   </DashboardLayout>
 );
-
-export default Dashboard;

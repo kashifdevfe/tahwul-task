@@ -18,7 +18,6 @@ export function useMediaQuery(query: string) {
       return () => mql.removeEventListener('change', onChange);
     }
 
-    // Safari < 14 fallback
     // @ts-expect-error legacy API
     mql.addListener(onChange);
     // @ts-expect-error legacy API

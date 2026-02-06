@@ -42,7 +42,7 @@ interface CardTitleProps {
 
 export const CardTitle = ({ children, className }: CardTitleProps) => {
     return (
-        <h2 className={cn("dashboard-heading text-slate-800", className)}>
+        <h2 className={cn("heading-bold text-slate-800", className)}>
             {children}
         </h2>
     );

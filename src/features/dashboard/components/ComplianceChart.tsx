@@ -1,5 +1,5 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
-import { CHART_LABELS } from '../../constants';
+import { CHART_LABELS } from '../../../constants';
 
 interface ComplianceChartProps {
     score: number;
@@ -15,7 +15,7 @@ export const ComplianceChart = ({ score }: ComplianceChartProps) => {
 
     return (
         <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm flex flex-col h-full min-w-0">
-            <h2 className="dashboard-heading text-slate-800 mb-6">{CHART_LABELS.COMPLIANCE_SCORE}</h2>
+            <h2 className="heading-bold text-slate-800 mb-6">{CHART_LABELS.COMPLIANCE_SCORE}</h2>
             <div className="flex-1 relative min-h-[170px] sm:min-h-[190px]">
                 <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
@@ -39,7 +39,7 @@ export const ComplianceChart = ({ score }: ComplianceChartProps) => {
                 </ResponsiveContainer>
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-center pb-2">
                     <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">{score}%</span>
-                    <p className="text-xs text-slate-400 font-medium mt-1">Basic Standards 2025</p>
+                    <p className="text-xs text-slate-400 font-normal mt-1">Basic Standards 2025</p>
                 </div>
             </div>
         </div>

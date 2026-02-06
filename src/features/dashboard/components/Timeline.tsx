@@ -1,5 +1,5 @@
-import type { TimelineEvent } from './types';
-import { cn } from '../../utils/cn';
+import type { TimelineEvent } from '../types';
+import { cn } from '../../../utils/cn';
 
 interface TimelineProps {
     events: TimelineEvent[];
@@ -12,9 +12,9 @@ export const Timeline = ({ events }: TimelineProps) => {
         : 0;
 
     return (
-        <div className="bg-white rounded-[10px] border border-slate-100 shadow-sm mb-8 w-full min-h-[159px] px-4 sm:px-6 lg:px-16 py-6 flex flex-col justify-between overflow-hidden">
+        <div className="bg-white rounded-[10px] border border-slate-100 shadow-sm mb-8 w-full min-h-[159px] px-4 sm:px-5 lg:px-10 py-5 flex flex-col justify-between overflow-hidden">
             <div className="flex justify-between items-center mb-6">
-                <h2 className="dashboard-heading text-primary">Project Timeline</h2>
+                <h2 className="heading-bold text-primary">Project Timeline</h2>
                 <div className="relative">
                     <select className="appearance-none text-[13px] font-semibold bg-white border border-slate-200 rounded-xl px-4 py-2 pr-9 text-slate-500 focus:outline-none focus:ring-0 cursor-pointer">
                         <option>2026</option>
@@ -68,11 +68,11 @@ export const Timeline = ({ events }: TimelineProps) => {
                                 )}
                             />
 
-                            <div className="mt-6 flex flex-col items-center text-center w-max px-2">
-                                <p className="text-[14px] font-normal leading-[16px] text-sidebar-muted capitalize mb-1 whitespace-nowrap">
+                            <div className="mt-6 flex flex-col items-center text-center w-full min-w-0 px-1">
+                                <p className="text-normal-sm text-sidebar-muted mb-1 break-words">
                                     {event.date}
                                 </p>
-                                <p className="text-[14px] font-medium leading-[16px] text-slate-600 capitalize whitespace-nowrap">
+                                <p className="text-normal-sm text-slate-600 font-medium break-words">
                                     {event.title}
                                 </p>
                             </div>

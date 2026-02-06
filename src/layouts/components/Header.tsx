@@ -1,7 +1,7 @@
 import { Menu } from 'lucide-react';
-import { SearchInput } from './common/SearchInput';
-import { NotificationButton } from './common/NotificationButton';
-import { UserMenu } from './common/UserMenu';
+import { SearchInput } from '../../components/common/SearchInput';
+import { NotificationButton } from '../../components/common/NotificationButton';
+import { UserMenu } from '../../components/common/UserMenu';
 
 interface HeaderProps {
     onMobileMenuClick?: () => void;

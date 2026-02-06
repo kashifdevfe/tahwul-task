@@ -5,16 +5,16 @@ import type {
   ProgressStatusItem,
   StatCardData,
   TimelineEvent,
-} from './types';
-import { PERSPECTIVES, PROGRESS_CATEGORIES, PROGRESS_SUBCATEGORIES, STATISTICS, TIMELINE } from '../../constants';
+} from '../types';
+import { PERSPECTIVES, PROGRESS_CATEGORIES, PROGRESS_SUBCATEGORIES, STATISTICS, TIMELINE } from '../../../constants';
 
 export const stats: StatCardData[] = [
-  { title: STATISTICS.OVERALL_PROGRESS, value: '78.65%', icon: 'BarChart' },
-  { title: STATISTICS.TOTAL_CRITERIA, value: 95, icon: 'Folder' },
-  { title: STATISTICS.COMPLETED_CRITERIA, value: 52, icon: 'ShieldCheck' },
-  { title: STATISTICS.EVIDENCE_DOCUMENTS, value: 386, icon: 'FileText' },
-  { title: STATISTICS.EVIDENCE_COMPLETED, value: 302, icon: 'RefreshCcw' },
-  { title: STATISTICS.UPLOADED_TO_DGA, value: 258, icon: 'UploadCloud' },
+  { title: STATISTICS.OVERALL_PROGRESS, value: '78.65%', icon: 'ChartBarLineIcon' },
+  { title: STATISTICS.TOTAL_CRITERIA, value: 95, icon: 'Folder01Icon' },
+  { title: STATISTICS.COMPLETED_CRITERIA, value: 52, icon: 'FolderCheckIcon' },
+  { title: STATISTICS.EVIDENCE_DOCUMENTS, value: 386, icon: 'FileSecurityIcon' },
+  { title: STATISTICS.EVIDENCE_COMPLETED, value: 302, icon: 'FileVerifiedIcon' },
+  { title: STATISTICS.UPLOADED_TO_DGA, value: 258, icon: 'FileUploadIcon' },
 ];
 
 export const timeline: TimelineEvent[] = [

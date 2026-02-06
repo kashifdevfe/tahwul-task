@@ -1,2 +1,2 @@
-export { Dashboard } from './Dashboard';
-export { DigitalTransformationDetail } from './Details';
+export { Dashboard } from '../features/dashboard';
+export { DigitalTransformationDetail } from '../features/project-details';
